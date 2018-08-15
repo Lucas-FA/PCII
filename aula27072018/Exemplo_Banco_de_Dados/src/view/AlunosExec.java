@@ -11,22 +11,22 @@ public class AlunosExec {
 	public static void main(String[] args) {
 		Alunos alunos = new Alunos();
 		try {
-			
-			alunos.setNome("Jeferson Roberto de Lima");
-			alunos.setEndereco("Av. Águia de Haia, 2600");
-			alunos.setBairro("Jd. São Nicolau");
-			alunos.setCep(01243-213);
-			
 			Connection connection = JdbUtil.getConnection();
 			AlunosJdbcDAO alunosJdbcDao = new AlunosJdbcDAO(connection);
 			
-			alunosJdbcDao.salvar(alunos);
+			alunos.setNome("Zeus");
+			alunos.setEndereco("Monte Olimpo, 0");
+			alunos.setBairro("Jd. dos Deuses");
+			alunos.setCep(01243213);
+
+			//alunosJdbcDao.salvar(alunos);
+			//alunosJdbcDao.deletar(alunos);
+			//alunosJdbcDao.listar();
+			//alunosJdbcDao.alterar(alunos, 5);
 		}
 		
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }
