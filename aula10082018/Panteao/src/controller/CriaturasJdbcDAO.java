@@ -17,7 +17,7 @@ public class CriaturasJdbcDAO {
 	}
 	
 	public void salvar(Criaturas c) throws SQLException {
-		String sql = "insert into criaturas (nome, endereco, bairro, cep) values ('"+c.getNome()+"','"+c.getOrigem()+"','"+c.getMoradia()+"')";
+		String sql = "insert into criaturas (nome, origem, moradia) values ('"+c.getNome()+"','"+c.getOrigem()+"','"+c.getMoradia()+"')";
 		System.out.println(sql);
 		PreparedStatement prepareStatement = this.conn.prepareStatement(sql);
 		prepareStatement.executeUpdate();

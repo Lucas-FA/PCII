@@ -17,7 +17,7 @@ public class SemiDeusesJdbcDAO {
 	}
 	
 	public void salvar(SemiDeuses sd) throws SQLException {
-		String sql = "insert into semideuses (nome, origem, moradia, responsavel) values ('"+sd.getNome()+"','"+sd.getOrigem()+"','"+sd.getMoradia()+"')";
+		String sql = "insert into semideuses (nome, origem, moradia, responsavel) values ('"+sd.getNome()+"','"+sd.getOrigem()+"','"+sd.getMoradia()+"','"+sd.getResponsavel()+"')";
 		System.out.println(sql);
 		PreparedStatement prepareStatement = this.conn.prepareStatement(sql);
 		prepareStatement.executeUpdate();
