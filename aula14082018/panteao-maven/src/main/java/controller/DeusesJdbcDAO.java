@@ -17,7 +17,7 @@ private Connection conn;
 	}
 	
 	public void salvar(Deuses d) throws SQLException {
-		String sql = "insert into deuses (nome, origem, atributos, moradia) values ('"+d.getNome()+"','"+d.getOrigem()+"','"+d.getMoradia()+"')";
+		String sql = "insert into deuses (nome, origem, atributos, moradia) values ('"+d.getNome()+"','"+d.getOrigem()+"','"+d.getAtributos()+"','"+d.getMoradia()+"')";
 		System.out.println(sql);
 		PreparedStatement prepareStatement = this.conn.prepareStatement(sql);
 		prepareStatement.executeUpdate();
